@@ -236,6 +236,34 @@
       z-index: 10;
     }
 
+    .scene[data-phase="focus"] .big-claim,
+    .scene[data-phase="focus"] .hero-title {
+      transform: translateY(-.35cqw);
+    }
+
+    .scene[data-phase="scan"] .news-card,
+    .scene[data-phase="scan"] .step,
+    .scene[data-phase="scan"] .stat {
+      opacity: .58;
+      transform: translateY(.35cqw);
+    }
+
+    .scene[data-phase="scan"] .news-card.is-hot,
+    .scene[data-phase="scan"] .step.is-hot,
+    .scene[data-phase="scan"] .stat.is-hot {
+      opacity: 1;
+      transform: translateY(0);
+      border-color: rgba(111,227,255,.7);
+      box-shadow: 0 1cqw 3.2cqw rgba(111,227,255,.12), 0 1cqw 2.8cqw rgba(0,0,0,.28);
+    }
+
+    .scene[data-phase="resolve"] .news-card,
+    .scene[data-phase="resolve"] .step,
+    .scene[data-phase="resolve"] .stat {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .kicker {
       color: var(--yellow);
       font-size: 1.15cqw;
@@ -302,7 +330,7 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(111,227,255,.55), transparent);
       transform-origin: left center;
-      animation: pulse 1.8s ease-in-out infinite;
+      animation: pulse 3.2s ease-in-out infinite;
     }
 
     .news-row {
@@ -322,6 +350,7 @@
       box-shadow: 0 1cqw 2.8cqw rgba(0,0,0,.28);
       border-radius: .6cqw;
       overflow: hidden;
+      transition: none;
     }
 
     .tag {
@@ -386,6 +415,7 @@
       background: rgba(32,36,43,.82);
       border: 1px solid var(--line);
       border-radius: .6cqw;
+      transition: none;
     }
 
     .stat .num {
@@ -420,6 +450,7 @@
       color: var(--ink);
       font-size: 1cqw;
       font-weight: 850;
+      transition: none;
     }
 
     .warning {
@@ -519,7 +550,7 @@
     <div class="brand"><div class="brand-mark"></div><div>AI Hot / 小地瓜 AI 营销</div></div>
     <div class="clock"></div>
 
-    <section class="scene active" data-start="0" data-end="5" data-caption="AI 正在离开聊天框，进入流程。">
+    <section class="scene active" data-start="0" data-end="4.2" data-caption="重点：AI 从聊天框，进入真实流程。">
       <div class="kicker">AI HOT / 小地瓜 AI 营销</div>
       <h1 class="hero-title">AI 正在离开<br><span>聊天框</span></h1>
       <p class="subline">真正的变化，不在回答里，在流程里。</p>
@@ -535,11 +566,11 @@
       </div>
     </section>
 
-    <section class="scene" data-start="5" data-end="9" data-caption="OpenAI 收购 Ona，ChatGPT Agent 化，Claude 开始定时执行。">
+    <section class="scene" data-start="4.2" data-end="8.4" data-caption="重点：Agent 不再只回答，而是长期执行任务。">
       <div class="kicker">01 / Agent</div>
       <h2 class="big-claim">从问答入口，<br><em>变成任务入口。</em></h2>
       <div class="news-row">
-        <article class="news-card">
+        <article class="news-card is-hot">
           <div class="tag">OpenAI + Ona</div>
           <h3>Codex 云端工作环境</h3>
           <p>Agent 有地方长期执行。</p>
@@ -557,12 +588,12 @@
       </div>
     </section>
 
-    <section class="scene" data-start="9" data-end="14" data-caption="Claude 抬高上限；DiffusionGemma 提速；MiniMax M3 和 Apple 把 AI 推进开源与系统。">
+    <section class="scene" data-start="8.4" data-end="12.7" data-caption="重点：模型升级，正在服务复杂任务和系统底座。">
       <div class="kicker">02 / Models</div>
       <h2 class="big-claim">模型更新，开始服务<br><em>流程自动化。</em></h2>
       <div class="model-grid">
         <div class="news-row" style="grid-template-columns: 1fr 1fr;">
-          <article class="news-card">
+          <article class="news-card is-hot">
             <div class="tag">Claude Fable / Mythos</div>
             <h3>抬高任务上限</h3>
             <p>复杂任务进入可委托范围。</p>
@@ -573,26 +604,26 @@
             <p>长上下文、编码、多模态。</p>
           </article>
         </div>
-        <div class="stat">
+        <div class="stat is-hot">
           <div class="num">4x</div>
           <div class="label">DiffusionGemma 提速；Apple 把 AI 放进系统底层。</div>
         </div>
       </div>
     </section>
 
-    <section class="scene" data-start="14" data-end="17" data-caption="Runway、Luma 让视频工具流程化；OpenAI 上市准备和中国 AI 基建把竞争推向基础设施。">
+    <section class="scene" data-start="12.7" data-end="16.5" data-caption="重点：视频生产和 AI 基建，都在流程化。">
       <div class="kicker">03 / Content & Infra</div>
       <h2 class="big-claim">AI 进入内容生产线<br><em>和基础设施。</em></h2>
       <div class="pipeline">
         <div class="step">选题</div>
         <div class="step">脚本</div>
-        <div class="step">画面</div>
-        <div class="step">编辑</div>
+        <div class="step is-hot">画面</div>
+        <div class="step is-hot">编辑</div>
         <div class="step">适配</div>
         <div class="step">发布</div>
       </div>
       <div class="news-row">
-        <article class="news-card">
+        <article class="news-card is-hot">
           <div class="tag">Runway / Luma</div>
           <h3>视频工具流程化</h3>
           <p>生成、编辑、适配、API。</p>
@@ -610,11 +641,11 @@
       </div>
     </section>
 
-    <section class="scene" data-start="17" data-end="18" data-caption="流程越真实，责任越真实。AI 可以执行，但关键判断必须有人确认。">
+    <section class="scene" data-start="16.5" data-end="18.2" data-caption="重点：营销不是多用工具，而是设计可执行流程。">
       <div class="kicker warning">04 / What It Means</div>
       <h2 class="big-claim">营销真正该学的，<br><em>是指挥流程。</em></h2>
       <div class="news-row">
-        <article class="news-card">
+        <article class="news-card is-hot">
           <div class="tag">目标</div>
           <h3>要转化什么？</h3>
           <p>先定义结果。</p>
@@ -632,7 +663,7 @@
       </div>
     </section>
 
-    <section class="scene final" data-start="18" data-end="20" data-caption="Stay hungry, Stay foolish. AI runs the process. Humans own the imagination.">
+    <section class="scene final" data-start="18.2" data-end="20" data-caption="Stay hungry, Stay foolish. AI runs the process. Humans own the imagination.">
       <div class="kicker">小地瓜 AI 营销</div>
       <h1 class="hero-title">从使用 AI<br><span>到指挥 AI</span></h1>
       <div class="slogan">
@@ -668,8 +699,15 @@
     function setTime(t) {
       const clamped = Math.max(0, Math.min(duration, t));
       for (const scene of scenes) {
-        scene.el.classList.toggle("active", clamped >= scene.start && clamped < scene.end);
-        if (clamped >= scene.start && clamped < scene.end) caption.textContent = scene.caption;
+        const isActive = clamped >= scene.start && clamped < scene.end;
+        scene.el.classList.toggle("active", isActive);
+        scene.el.removeAttribute("data-phase");
+        if (isActive) {
+          const sceneDuration = Math.max(.01, scene.end - scene.start);
+          const local = (clamped - scene.start) / sceneDuration;
+          scene.el.dataset.phase = local < .2 ? "focus" : local < .62 ? "scan" : "resolve";
+          caption.textContent = scene.caption;
+        }
       }
       progress.style.width = `${(clamped / duration) * 100}%`;
       if (clamped >= duration) playing = false;
