@@ -213,6 +213,7 @@
       font-size: .92cqw;
       color: var(--muted);
       z-index: 20;
+      display: none;
     }
 
     .scene {
@@ -221,7 +222,7 @@
       padding: 8.8% 6.2% 6.2%;
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity .24s ease, transform .24s ease;
+      transition: none;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -516,9 +517,9 @@
   <main class="stage" id="stage">
     <div class="grain"></div>
     <div class="brand"><div class="brand-mark"></div><div>AI Hot / 小地瓜 AI 营销</div></div>
-    <div class="clock">20 秒 AI 热点</div>
+    <div class="clock"></div>
 
-    <section class="scene active" data-start="0" data-end="3" data-caption="AI 正在离开聊天框，进入流程。">
+    <section class="scene active" data-start="0" data-end="5" data-caption="AI 正在离开聊天框，进入流程。">
       <div class="kicker">AI HOT / 小地瓜 AI 营销</div>
       <h1 class="hero-title">AI 正在离开<br><span>聊天框</span></h1>
       <p class="subline">真正的变化，不在回答里，在流程里。</p>
@@ -534,7 +535,7 @@
       </div>
     </section>
 
-    <section class="scene" data-start="3" data-end="7" data-caption="OpenAI 收购 Ona，ChatGPT Agent 化，Claude 开始定时执行。">
+    <section class="scene" data-start="5" data-end="9" data-caption="OpenAI 收购 Ona，ChatGPT Agent 化，Claude 开始定时执行。">
       <div class="kicker">01 / Agent</div>
       <h2 class="big-claim">从问答入口，<br><em>变成任务入口。</em></h2>
       <div class="news-row">
@@ -556,7 +557,7 @@
       </div>
     </section>
 
-    <section class="scene" data-start="7" data-end="12" data-caption="Claude 抬高上限；DiffusionGemma 提速；MiniMax M3 和 Apple 把 AI 推进开源与系统。">
+    <section class="scene" data-start="9" data-end="14" data-caption="Claude 抬高上限；DiffusionGemma 提速；MiniMax M3 和 Apple 把 AI 推进开源与系统。">
       <div class="kicker">02 / Models</div>
       <h2 class="big-claim">模型更新，开始服务<br><em>流程自动化。</em></h2>
       <div class="model-grid">
@@ -579,7 +580,7 @@
       </div>
     </section>
 
-    <section class="scene" data-start="12" data-end="16" data-caption="Runway、Luma 让视频工具流程化；OpenAI 上市准备和中国 AI 基建把竞争推向基础设施。">
+    <section class="scene" data-start="14" data-end="17" data-caption="Runway、Luma 让视频工具流程化；OpenAI 上市准备和中国 AI 基建把竞争推向基础设施。">
       <div class="kicker">03 / Content & Infra</div>
       <h2 class="big-claim">AI 进入内容生产线<br><em>和基础设施。</em></h2>
       <div class="pipeline">
@@ -609,7 +610,7 @@
       </div>
     </section>
 
-    <section class="scene" data-start="16" data-end="18" data-caption="流程越真实，责任越真实。AI 可以执行，但关键判断必须有人确认。">
+    <section class="scene" data-start="17" data-end="18" data-caption="流程越真实，责任越真实。AI 可以执行，但关键判断必须有人确认。">
       <div class="kicker warning">04 / What It Means</div>
       <h2 class="big-claim">营销真正该学的，<br><em>是指挥流程。</em></h2>
       <div class="news-row">
